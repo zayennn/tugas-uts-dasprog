@@ -9,6 +9,8 @@ app.config['MYSQL_USER'] = "root"
 app.config['MYSQL_PASSWORD'] = ""
 app.config['MYSQL_DB'] = "db_todo_list"
 
+mysql = MySQL(app)
+
 @app.route('/')
 def index() :
     return "salaam'aleykum dunyaa!"
