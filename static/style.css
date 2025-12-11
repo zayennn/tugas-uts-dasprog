@@ -1,3 +1,7 @@
+:root {
+    --transition: all .3s ease;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +17,7 @@ body {
     align-items: center;
 }
 
+/* navbar */
 a.brand {
     font-size: 1.2rem;
     font-weight: 600;
@@ -31,8 +36,16 @@ a.brand {
     left: 0;
 }
 
+/* content */
+.content {
+    padding-top: 90px;
+    width: 800px;
+}
+
+
+/* index page */
 .btn__a {
-    margin: 100px 370px 10px 0;
+    margin: 0 0 10px 0;
     padding: 10px 15px;
     background-color: skyblue;
     color: #fff;
@@ -44,7 +57,7 @@ a.brand {
 }
 
 table {
-    width: 800px;
+    width: 100%;
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
@@ -65,8 +78,7 @@ tbody tr:nth-child(odd) {
 }
 
 .btn {
-    width: 90px;
-    height: 40px;
+    padding: 10px 30px;
     border-radius: 10px;
     border: none;
     text-transform: capitalize;
@@ -79,4 +91,59 @@ tbody tr:nth-child(odd) {
 .btn.btn__delete {
     background-color: tomato;
     color: #fff;
+}
+
+
+/* create page */
+.title {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+label {
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+label::after {
+    content: " *";
+    color: tomato;
+}
+
+.form__control {
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form__control:focus {
+    border: none;
+    box-shadow: 0 0 .4rem rgb(135, 207, 235);
+}
+
+option {
+    text-transform: capitalize;
+}
+
+.btn__group {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.btn__a.delete {
+    margin: 0;
+    background-color: tomato;
 }
