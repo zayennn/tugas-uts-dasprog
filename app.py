@@ -19,7 +19,7 @@ def index() :
 # maya
 @app.route('/create', methods=["GET", "POST"])
 def create():
-    return "ini halaman create"
+    return render_template('create.html')
 
 # kemal
 @app.route('/edit/<int:id>', methods=["GET", "POST"])

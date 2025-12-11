@@ -1,5 +1,31 @@
 {% extends "layouts/index.html" %}
 
 {% block content %}
-    <h1>ini halaman create</h1>
+    <h2 class="title">create new tasks</h2>
+
+    <form action="">
+        <div class="form__input">
+            <label for="name">nama task</label>
+            <input 
+                type="text" 
+                name="name" 
+                class="form__control"
+                placeholder="Masak Indomie..."
+                required
+            >
+        </div>
+        <div class="form__input">
+            <label for="status">status</label>
+            <select name="status" id="status" class="form__control" required>
+                <option value="status_task" selected disabled>Status Task</option>
+                <option value="pending">Pending</option>
+                <option value="complete">Complete</option>
+            </select>
+        </div>
+
+        <div class="btn__group">
+            <a href="{{ url_for('index') }}" class="btn__a delete">Kembali</a>
+            <button class="btn btn__primary">tambah task</button>
+        </div>
+    </form>
 {% endblock %}
