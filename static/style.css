@@ -30,3 +30,53 @@ a.brand {
     top: 0;
     left: 0;
 }
+
+.btn__a {
+    margin: 100px 370px 10px 0;
+    padding: 10px 15px;
+    background-color: skyblue;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    width: max-content;
+    text-transform: capitalize;
+}
+
+table {
+    width: 800px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: #ddd;
+    text-align: left;
+}
+
+th, td {
+    padding: 1rem;
+    text-transform: capitalize;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f4f4f496;
+}
+
+.btn {
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btn.btn__primary {
+    background-color: lightgreen;
+}
+.btn.btn__delete {
+    background-color: tomato;
+    color: #fff;
+}
