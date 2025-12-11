@@ -13,23 +13,7 @@ body {
     align-items: center;
 }
 
-a.brand {
-    font-size: 1.2rem;
-    font-weight: 600;
-    font-style: italic;
-    text-transform: capitalize;
-    color: #333333;
-}
 
-.navbar__container {
-    width: 100%;
-    padding: 20px 30px;
-    background-color: #fff;
-    box-shadow: 0 3px 5px #00000034;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 
 .btn__a {
     margin: 100px 370px 10px 0;
