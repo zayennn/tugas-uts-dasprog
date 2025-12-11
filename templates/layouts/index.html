@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tugas todo list dasprog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-    {% block content %}
+    <div class="navbar__container">
+        <a href="/" class="brand">todo list</a>
+    </div>
 
+    {% block content %}
+        
     {% endblock %}
     
 </body>
