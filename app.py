@@ -24,7 +24,7 @@ def create():
 # kemal
 @app.route('/edit/<int:id>', methods=["GET", "POST"])
 def edit(id):
-    return "ini halaman edit"
+    return render_template('edit.html')
 
 # ardel
 @app.route('/delete/<int:id>', methods=["GET", "POST"])
