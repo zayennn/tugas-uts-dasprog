@@ -15,8 +15,8 @@
                 <td>1</td>
                 <td>bikin indomie</td>
                 <td>
-                    <button class="btn btn__primary">edit</button>
-                    <button class="btn btn__delete">delete</button>
+                    <a href="{{ url_for('edit', id=1) }}" class="btn btn__primary">edit</a>
+                    <a href="{{ url_for('delete', id=1) }}" class="btn btn__delete">delete</a>
                 </td>
             </tr>
         </tbody>

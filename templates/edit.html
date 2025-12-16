@@ -1,5 +1,31 @@
 {% extends "layouts/index.html" %}
 
 {% block content %}
-    <h1>ini halaman edit</h1>
+<h2 class="title">Edit Task</h2>
+
+    <form method="POST">
+        <div class="form__input">
+            <label for="name">Task Name</label>
+            <input 
+                type="text" 
+                name="name" 
+                class="form__control"
+                placeholder="Masak Indomie..."
+                value="{{ task[1] }}" required
+            >
+        </div>
+        <div class="form__input">
+            <label for="status">status</label>
+            <select name="status" id="status" class="form__control" required>
+                <option value="status_task" selected disabled>Status Task</option>
+                <option value="pending" {% if task[2] == 'pending' %}selected{% endif %}>Pending</option>
+                <option value="complete"{% if task[2] == 'complete' %}selected{% endif %}>Complete</option>
+            </select>
+        </div>
+
+        <div class="btn__group">
+            <a href="{{ url_for('index') }}" class="btn__a delete">Kembali</a>
+            <button class="btn btn__primary">tambah task</button>
+        </div>
+    </form>
 {% endblock %}
