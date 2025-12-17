@@ -45,4 +45,3 @@ def edit(id):
 def delete(id):
     pass
 # jangantinggalinaku
-
