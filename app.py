@@ -44,20 +44,22 @@ def create():
 # kemal
 @app.route('/edit/<int:id>', methods=["GET", "POST"])
 def edit(id):
-    cur = mysql.connection.cursor()
-
     if request.method == "POST":
+        cur = mysql.connection.cursor()
         name = request.form['name']
         status = request.form['status']
         cur.execute(
-            "UPDATE tasks SET name=%s WHERE id=%s",
+            "UPDATE tasks SET name=%s, status=%s WHERE id=%s",
             (name, status, id)
         )
         mysql.connection.commit()
+        cur.close()
         return redirect(url_for('index'))
 
+    cur = mysql.connection.cursor()
     cur.execute("SELECT * FROM tasks WHERE id=%s", (id,))
     task = cur.fetchone()
+    cur.close()
     return render_template('edit.html', task=task)
 
 # ardel
