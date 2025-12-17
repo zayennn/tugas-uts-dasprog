@@ -12,15 +12,17 @@
             </tr>
         </thead>
         <tbody>
+            {% for task in tasks %}
             <tr>
-                <td>1</td>
-                <td>bikin indomie</td>
-                <td class="pending">pending</td>
+                <td>{{loop.index}}</td>
+                <td>{{ task[1] }}</td>
+                <td>{{ task[2] }}</td>
                 <td>
-                    <a href="{{ url_for('edit', id=1) }}" class="btn btn__primary">edit</a>
-                    <a href="{{ url_for('delete', id=1) }}" class="btn btn__delete">delete</a>
+                    <a href="{{ url_for('edit', id=task[0]) }}" class="btn btn__primary">edit</a>
+                    <a href="{{ url_for('delete', id=task[0]) }}" class="btn btn__delete">delete</a>
                 </td>
             </tr>
+            {% endfor %}
         </tbody>
     </table>
 {% endblock %}

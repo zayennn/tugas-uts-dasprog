@@ -13,8 +13,14 @@ mysql = MySQL(app)
 
 # khansa
 @app.route('/')
-def index() :
-    return render_template('index.html')
+def index():
+    cursor = mysql.connection.cursor()
+    cursor.execute("SELECT * FROM tasks")
+    tasks = cursor.fetchall()
+    cursor.close()
+    # tet
+
+    return render_template('index.html', tasks=tasks)
 
 # maya
 @app.route('/create', methods=['GET', 'POST'])
