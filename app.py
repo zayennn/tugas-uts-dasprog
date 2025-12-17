@@ -41,11 +41,11 @@ def edit(id):
     cur = mysql.connection.cursor()
 
     if request.method == "POST":
-        nama = request.form['nama']
+        name = request.form['name']
         status = request.form['status']
         cur.execute(
-            "UPDATE tasks SET nama_task=%s WHERE id=%s",
-            (nama, status, id)
+            "UPDATE tasks SET name=%s WHERE id=%s",
+            (name, status, id)
         )
         mysql.connection.commit()
         return redirect(url_for('index'))
@@ -58,4 +58,3 @@ def edit(id):
 @app.route('/delete/<int:id>', methods=["GET", "POST"])
 def delete(id):
     pass
-# jangantinggalinaku
