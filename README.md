@@ -24,7 +24,7 @@ Project ini adalah aplikasi web Todo List yang dibuat untuk memudahkan pengguna 
    - Form untuk mengubah data task yang sudah ada
    - Dapat mengubah nama task dan status
    - Menggunakan ID task untuk mengidentifikasi task yang akan diedit
-   - **Dikembangkan oleh: 2. Muhammad Kemal Gafan Kusuma (15250504)**
+   - **Dikembangkan oleh: Muhammad Kemal Gafan Kusuma (15250504)**
 
 ### 4. **Menghapus Task (Delete)**
    - Fitur untuk menghapus task dari database
