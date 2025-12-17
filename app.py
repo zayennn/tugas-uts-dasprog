@@ -17,8 +17,22 @@ def index() :
     return render_template('index.html')
 
 # maya
-@app.route('/create', methods=["GET", "POST"])
+@app.route('/create', methods=['GET', 'POST'])
 def create():
+    if request.method == 'POST':
+        name = request.form['name']
+        status = request.form['status']
+
+        cursor = mysql.connection.cursor()
+        cursor.execute(
+            "INSERT INTO tasks (name, status) VALUES (%s, %s)",
+            (name, status)
+        )
+        mysql.connection.commit()
+        cursor.close()
+
+        return redirect(url_for('index'))
+
     return render_template('create.html')
 
 # kemal
