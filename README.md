@@ -12,30 +12,30 @@ Project ini adalah aplikasi web Todo List yang dibuat untuk memudahkan pengguna 
    - Menampilkan daftar semua task yang ada dalam database
    - Menampilkan informasi: nomor urut, nama task, dan status task
    - Menyediakan tombol untuk menambah task baru, edit, dan delete
-   - **Dikembangkan oleh: Khansa**
+   - **Dikembangkan oleh: Khansa Azzahra Gandi (15250371)**
 
 ### 2. **Membuat Task Baru (Create)**
    - Form untuk menambahkan task baru
    - Input nama task
    - Pilihan status task (Pending/Complete)
-   - **Dikembangkan oleh: Maya**
+   - **Dikembangkan oleh: ⁠Maya Revalina Simbolon (15250439)**
 
 ### 3. **Mengedit Task (Edit)**
    - Form untuk mengubah data task yang sudah ada
    - Dapat mengubah nama task dan status
    - Menggunakan ID task untuk mengidentifikasi task yang akan diedit
-   - **Dikembangkan oleh: Kemal**
+   - **Dikembangkan oleh: 2. Muhammad Kemal Gafan Kusuma (15250504)**
 
 ### 4. **Menghapus Task (Delete)**
    - Fitur untuk menghapus task dari database
    - Menggunakan ID task untuk mengidentifikasi task yang akan dihapus
-   - **Dikembangkan oleh: Ardel**
+   - **Dikembangkan oleh: Ardel Fadillah Aska (15250522)**
 
 ### 5. **Frontend/UI**
    - Desain antarmuka yang user-friendly
    - Styling dengan CSS untuk pengalaman pengguna yang lebih baik
    - Layout responsif dengan navbar
-   - **Dikembangkan oleh: Elang**
+   - **Dikembangkan oleh: Elang Atha Zahran ( 15250506 )**
 
 ## 👥 Anggota Tim
 
