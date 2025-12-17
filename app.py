@@ -44,3 +44,5 @@ def edit(id):
 @app.route('/delete/<int:id>', methods=["GET", "POST"])
 def delete(id):
     pass
+# jangantinggalinaku
+

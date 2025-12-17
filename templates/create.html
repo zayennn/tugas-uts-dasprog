@@ -1,31 +1,31 @@
 {% extends "layouts/index.html" %}
 
 {% block content %}
-    <h2 class="title">create new tasks</h2>
+    <h2 class="title">Edit Task</h2>
 
-    <form action="">
+    <form method="POST" action="{{ url_for('update_task', task_id=task.id) }}">
         <div class="form__input">
-            <label for="name">nama task</label>
+            <label for="name">Nama Task</label>
             <input 
                 type="text" 
                 name="name" 
                 class="form__control"
+                value="{{ task.name }}"
                 placeholder="Masak Indomie..."
                 required
             >
         </div>
         <div class="form__input">
-            <label for="status">status</label>
+            <label for="status">Status</label>
             <select name="status" id="status" class="form__control" required>
-                <option value="status_task" selected disabled>Status Task</option>
-                <option value="pending">Pending</option>
-                <option value="complete">Complete</option>
+                <option value="pending" {% if task.status == 'pending' %}selected{% endif %}>Pending</option>
+                <option value="complete" {% if task.status == 'complete' %}selected{% endif %}>Complete</option>
             </select>
         </div>
 
         <div class="btn__group">
             <a href="{{ url_for('index') }}" class="btn__a delete">Kembali</a>
-            <button class="btn btn__primary">tambah task</button>
+            <button type="submit" class="btn btn__primary">Update Task</button>
         </div>
     </form>
 {% endblock %}
