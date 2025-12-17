@@ -1,25 +1,26 @@
 {% extends "layouts/index.html" %}
 
 {% block content %}
-<h2 class="title">Edit Task</h2>
+    <h2 class="title">edit tasks</h2>
 
-    <form method="POST">
+    <form action="">
         <div class="form__input">
-            <label for="name">Task Name</label>
+            <label for="name">nama task</label>
             <input 
                 type="text" 
                 name="name" 
                 class="form__control"
                 placeholder="Masak Indomie..."
-                value="{{ task[1] }}" required
+                value="Bikin Indomie"
+                required
             >
         </div>
         <div class="form__input">
             <label for="status">status</label>
             <select name="status" id="status" class="form__control" required>
                 <option value="status_task" selected disabled>Status Task</option>
-                <option value="pending" {% if task[2] == 'pending' %}selected{% endif %}>Pending</option>
-                <option value="complete"{% if task[2] == 'complete' %}selected{% endif %}>Complete</option>
+                <option value="pending">Pending</option>
+                <option value="complete">Complete</option>
             </select>
         </div>
 
