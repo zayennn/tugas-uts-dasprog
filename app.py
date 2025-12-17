@@ -39,6 +39,7 @@ def edit(id):
     cur.execute("SELECT * FROM tasks WHERE id=%s", (id,))
     task = cur.fetchone()
     return render_template('edit.html', task=task)
+#
 
 # ardel
 @app.route('/delete/<int:id>', methods=["GET", "POST"])
