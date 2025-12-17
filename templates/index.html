@@ -16,8 +16,7 @@
             <tr>
                 <td>{{loop.index}}</td>
                 <td>{{ task[1] }}</td>
-                <td>{{ task[2] }}</td> 
-                <!-- # test -->
+                <td>{{ task[2] }}</td>
                 <td>
                     <a href="{{ url_for('edit', id=task[0]) }}" class="btn btn__primary">edit</a>
                     <a href="{{ url_for('delete', id=task[0]) }}" class="btn btn__delete">delete</a>

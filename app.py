@@ -18,6 +18,7 @@ def index():
     cursor.execute("SELECT * FROM tasks")
     tasks = cursor.fetchall()
     cursor.close()
+    # tet
 
     return render_template('index.html', tasks=tasks)
 
