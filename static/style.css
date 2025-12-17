@@ -156,3 +156,7 @@ option {
     color: tomato;
     font-weight: 500;
 }
+.completed {
+    color: lightgreen !important;
+    font-weight: 500;
+}
