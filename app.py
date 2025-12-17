@@ -25,6 +25,7 @@ def create():
 @app.route('/edit/<int:id>', methods=["GET", "POST"])
 def edit(id):
     return render_template('edit.html')
+    #hjasbjbajsbdjabd
 
 # ardel
 @app.route('/delete/<int:id>', methods=["GET", "POST"])
