@@ -17,11 +17,11 @@ def index():
     cursor = mysql.connection.cursor() # ini tuh fungsinya buat bikin remote control ke db, kalo misalnya ga ada , kita gabkalan bisa 
                                        # komunikasi ke database / ngambil data / menambahkan data ke database
                                        
-    cursor.execute("SELECT * FROM tasks")
-    tasks = cursor.fetchall()
-    cursor.close()
+    cursor.execute("SELECT * FROM tasks") # kita nge eksekusi : Select semua data yang ada di table tasks
+    tasks = cursor.fetchall() # ngambil semua data
+    cursor.close() # tutup cursor nya supaya server ga down
 
-    return render_template('index.html', tasks=tasks)
+    return render_template('index.html', tasks=tasks) # redirect user ke halaman index dan membuat keyword argument untuk index.html
 
 # maya
 @app.route('/create', methods=['GET', 'POST'])
